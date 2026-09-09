@@ -1,4 +1,8 @@
 
+# Chat の出力形式
+
+Chat の回答は、簡潔な日本語で出力する。
+
 # 現行システム分析ドキュメント
 
 既存システムの理解・調査・棚卸し結果をドキュメント化する場合は、必ず `.github/skills/system-analysis-documentation/SKILL.md` を読み、その手順と記述規則に従う。
