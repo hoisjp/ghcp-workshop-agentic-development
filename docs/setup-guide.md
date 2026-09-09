@@ -147,7 +147,21 @@ code .
 
 リポジトリは、書き込み可能なローカルフォルダーへ配置する。ネットワークドライブや同期処理によるファイルロックが発生するフォルダーは避ける。
 
-## 8. 環境の検証
+## 8. Visual Studio Codeの設定
+
+### 8.1 日本語表示
+
+このリポジトリでは、日本語 Language Packを推奨拡張機能として設定している。Visual Studio Codeでリポジトリを開くと推奨拡張機能の通知が表示されるため、`Install`を選択して次の拡張機能をインストールする。
+
+- Japanese Language Pack for Visual Studio Code（`MS-CEINTL.vscode-language-pack-ja`）
+
+通知が表示されない場合は、Extensionsビューで`Japanese Language Pack for Visual Studio Code`を検索してインストールする。
+
+インストール後、コマンドパレット（`View`、`Command Palette`）で`Configure Display Language`を実行し、`日本語 (Japanese)`を選択する。確認メッセージが表示されたらVisual Studio Codeを再起動する。
+
+再起動後、メニューやコマンドパレットが日本語で表示されれば設定完了である。この表示言語はVisual Studio Codeのユーザー環境に保存されるため、リポジトリを利用する各ユーザーが一度設定する必要がある。
+
+## 9. 環境の検証
 
 Visual Studio Codeでリポジトリを開き、`Terminal`、`New Terminal`からターミナルを起動する。ターミナルの現在位置がリポジトリ直下であることを確認して、次を実行する。
 
@@ -172,7 +186,7 @@ npm run verify
 
 `npm run verify`はローカルDBを初期状態へ戻す。演習中に作成した注文を残したい場合は実行しない。
 
-## 9. アプリケーションの起動確認
+## 10. アプリケーションの起動確認
 
 リポジトリ直下で次を実行する。
 
@@ -206,11 +220,12 @@ Press Ctrl+C to stop the server.
 npm run app:start
 ```
 
-## 10. ワークショップ前チェックリスト
+## 11. ワークショップ前チェックリスト
 
 開催前日までに次を確認する。
 
 - [ ] Visual Studio Codeを起動できる。
+- [ ] Visual Studio Codeのメニューが日本語で表示される。
 - [ ] ワークショップ用のGitHubアカウントでGitHub Copilot Chatを利用できる。
 - [ ] ChatビューでAgent modeを選択できる。
 - [ ] `git --version`でバージョンが表示される。
@@ -221,7 +236,7 @@ npm run app:start
 - [ ] `npm start`で注文管理画面を表示できる。
 - [ ] 起動確認後にCtrl+Cでサーバーを停止した。
 
-## 11. トラブルシューティング
+## 12. トラブルシューティング
 
 ### `node`または`npm`が見つからない
 
@@ -289,7 +304,7 @@ npm run app:start
 - 実行したコマンド
 - 表示されたエラーメッセージ全文
 
-## 12. 追加資料
+## 13. 追加資料
 
 - [README](../README.md)
 - [アプリケーションの前提要件](application-requirements.md)
