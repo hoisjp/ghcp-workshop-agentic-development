@@ -1,6 +1,6 @@
 ---
 name: playwright-cli
-description: Automate browser interactions, test web pages and work with Playwright tests.
+description: Automate browser interactions, test web pages and work with Playwright tests. USE FOR: take a screenshot, capture a screenshot, save a screenshot to a file, screenshot a web page, スクリーンショットを撮る, 画面キャプチャ, ブラウザの画面を保存.
 allowed-tools: Bash(playwright-cli:*) Bash(npx:*) Bash(npm:*)
 ---
 
