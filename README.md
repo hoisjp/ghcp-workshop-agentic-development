@@ -61,9 +61,14 @@ macOS、Windows PowerShell、Windowsコマンドプロンプトで同じコマ�
 
 ## 主なファイル
 
+### ドキュメント
+
 - [workshop-guide.md](workshop-guide.md): ワークショップの進行
 - [docs/setup-guide.md](docs/setup-guide.md): 参加者向けのインストールと事前動作確認
 - [docs/application-requirements.md](docs/application-requirements.md): アプリケーションの前提要件と業務ルール
+
+### 既存アプリケーション
+
 - [app/index.mjs](app/index.mjs): Webサーバーの起動処理
 - [app/server.mjs](app/server.mjs): HTTPルーティングと入力処理
 - [app/database.mjs](app/database.mjs): SQLと注文業務処理
