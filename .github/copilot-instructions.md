@@ -1,7 +1,9 @@
 
 # Chat の出力形式
 
-Chat の回答は、簡潔な日本語で出力する。
+- すべての Chat の回答は、簡潔な日本語で出力する。
+- ユーザーに表示する reasoning / thinking / analysis / plan がある場合、それらも日本語で記述してください。
+- コード、コマンド、API 名、製品名、識別子など、英語のままにすべき技術要素は翻訳しないでください。
 
 # 現行システム分析ドキュメント
 
@@ -18,24 +20,3 @@ Chat の回答は、簡潔な日本語で出力する。
 - 共通の`ApplicationError`は`app/errors.mjs`だけに定義し、利用するモジュールから直接importする。機能モジュール間で再exportや相互importを行わず、依存関係を一方向に保つ。
 - 作業開始前に`npm test`で基準結果を確認する。DBが未準備の場合に限り`npm run db:init`を実行する。
 - `npm start`と`npm run verify`はDBを初期化するため、登録データを残す場合は`npm run app:start`と`npm test`を使う。
-
-# GitHub Copilot 利用ログ
-
-GitHub Copilot でユーザーの依頼を処理するたびに、ワークスペースルートの `tmp/ghcp.log` へ1件追記する。
-
-- 作業開始時に開始日時を記録し、応答を完了する直前に終了日時と経過時間を算出する。
-- ログが存在しない場合は `tmp` ディレクトリとログを作成する。既存ログは上書きしない。
-- ログには次の項目を必ず含める。
-  - `Prompt`: ユーザーが与えたプロンプト。添付ファイルの全文ではなく、ユーザーが入力した依頼文を記録する。
-  - `Summary`: 実施内容、変更した主なファイル、検証結果を簡潔にまとめる。回答だけの場合は回答の要点を記録する。
-  - `Started at`、`Finished at`、`Duration`: 開始日時、終了日時、実行時間（ISO 8601、タイムゾーン付き、およびミリ秒）を同じリスト1行に記録する。
-- 各エントリは、次の形式で空行を挟んで追記する。`Prompt` は複数行を保持できるようテキストのコードブロックに記録する。
-
-  ````markdown
-  ## <started_at>
-  - Started at: <started_at> | Finished at: <finished_at> | Duration: <duration_ms> ms
-  - Prompt: <prompt>
-  - Summary: <summary>
-  ````
-- ログの追記自体は `summary` の変更ファイル一覧に含めない。
-- ログへの追記に失敗した場合は、最終回答でその旨を短く通知する。
